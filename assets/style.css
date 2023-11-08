@@ -53,7 +53,7 @@ h1 {
 h2 {
     font-family: Inter;
     font-weight: 700;
-    font-size: 1.6875rem;
+    font-size: 1.4rem;
     color: #2E4B3A;
     text-align: center;
     margin-top: 5rem;
@@ -91,12 +91,12 @@ nav a:hover {
     -webkit-text-fill-color: #FFF; /* Relleno transparente */
 }
 
-.productos p {
+.productos p, .productos2 {
     font-family: 'Inter', sans-serif;
     font-style: italic;
     font-weight: 500;
     line-height: 123.023%;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     color: #2E4B3A;
     display: inline-block;
     text-align: center;
@@ -136,21 +136,21 @@ em {
 
 .boton {
     display: inline-block;
-    padding: 1.75rem 2.5rem ; /* Ajusta el padding según tus preferencias */
+    padding: 0.75rem 1.5rem ; /* Ajusta el padding según tus preferencias */
     background-color:#E59E32; /* Color de fondo del botón */
     color: #fff; /* Color del texto */
     font-family: Inter;
     text-decoration: none; /* Elimina el subrayado del enlace */
     border-radius:2.34375rem; /* Añade esquinas redondeadas */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    font-size: 1rem; /* Tamaño del texto */
+    font-size: 0.7rem; /* Tamaño del texto */
     font-weight: 700; /* Peso de la fuente */
     text-transform: uppercase;
     border: none; /* Sin borde */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     letter-spacing: 0.07rem;
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left: 27rem;
+    margin-right: 27rem;
 }
 
 .boton:hover {
@@ -198,7 +198,7 @@ main {
     margin: 0 auto;
 }
 
-.columna1, .columna2 {
+.columna1, .columna2, .columna3, .columna4, .columna5, .columna6, .columna7, .columna8 {
     margin-top: 3rem;
 }
 
@@ -221,4 +221,32 @@ main {
 
 .slider-container::-webkit-scrollbar {
     width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+.palta {
+    width: 100px; /* Cambia el ancho del icono */
+    height: auto;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.productos2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.calendario {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
