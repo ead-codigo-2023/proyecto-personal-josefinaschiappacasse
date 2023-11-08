@@ -1,0 +1,224 @@
+body {
+    /*background: #DEFFEA;*/
+    background-size:cover; 
+    background-image: url(imagenes/background-agricola.jpg);  
+    background-repeat: no-repeat; /* No se repite */
+}
+
+.fondo-especial {
+    background-image: url(imagenes/presentacion-agricola.JPG); /* Ruta de tu imagen */
+    background-size:cover; 
+    background-repeat: no-repeat; /* No se repite */
+}
+
+.fondo-especial-2 {
+    background-image: url(imagenes/background-agricola-oscuro.jpg); /* Ruta de tu imagen */
+    background-size:cover; 
+    background-repeat: no-repeat; /* No se repite */
+}
+
+.contenedor {
+    position: absolute;
+    top: 0;
+    left: 4.75rem;
+    right: 70rem;
+    bottom: 0;
+    background-color: #2e4b3a95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Alegreya;
+    font-size: 3rem; 
+    font-weight: 700;
+    line-height: 1.23023; 
+    text-transform: uppercase;
+    margin-top: 2rem;
+    letter-spacing: 0.25rem;
+    flex-shrink: 0; 
+    width: 15rem;
+    height: 9.3125rem;
+}
+
+h2 {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 1.6875rem;
+    color: #2E4B3A;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+h3 {
+    color: #2E4B3A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav {
+    padding: 10px;
+}
+
+nav a {
+    color:#FFF;
+    text-align: center;
+    display: block;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 123.023%;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 2.25rem ;
+}
+
+nav a:hover {
+    color: #FFA500;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #FFA500; /* Borde de las letras */
+    -webkit-text-fill-color: #FFF; /* Relleno transparente */
+}
+
+.productos p {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 123.023%;
+    font-size: 1.25rem;
+    color: #2E4B3A;
+    display: inline-block;
+    text-align: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.contacto p {
+    color: #2E4B3A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 156.023%; /* 1.56025rem */
+    width: 12.3125rem;
+    height: 5rem;
+    display: inline-block;
+}
+
+em {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 1.10rem;
+    font-style: none;
+    font-weight: 600;
+    line-height: 156.023%; 
+    width: 18rem;
+    height: 8.625rem;
+    flex-shrink: 0;
+    text-align: center;
+    margin: auto; /* Añadimos esto para centrar horizontalmente */
+    margin-top: 30%;
+    word-spacing: 0.6rem;
+    letter-spacing: 0.2rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 1.75rem 2.5rem ; /* Ajusta el padding según tus preferencias */
+    background-color:#E59E32; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    font-family: Inter;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius:2.34375rem; /* Añade esquinas redondeadas */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: 700; /* Peso de la fuente */
+    text-transform: uppercase;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    letter-spacing: 0.07rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+}
+
+.boton:hover {
+    background: #ab6c0d; 
+}
+
+.boton:active {
+    background: #4e3106; 
+}
+
+main {
+    text-align: center;
+    width: 65rem;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.historia p {
+    color:#FFF;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 156.023%; /* 1.95031rem */
+}
+
+.mi-icono {
+    width: 60px; /* Cambia el ancho del icono */
+    height: 60px; /* Cambia la altura del icono */
+}
+
+.icono {
+    width: 20px; /* Cambia el ancho del icono */
+    height: 20px; /* Cambia la altura del icono */
+}
+
+.section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.columna1, .columna2 {
+    margin-top: 3rem;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+  
+.slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+  
+    /* Vamos a añadir esto 👇 */
+    scroll-snap-align: center;
+}
+
+.slider-container::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
