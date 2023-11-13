@@ -1,53 +1,61 @@
+html, body, .fondo-especial, .fondo-especial-2 {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     /*background: #DEFFEA;*/
     background-size:cover; 
     background-image: url(imagenes/background-agricola.jpg);  
-    background-repeat: no-repeat; /* No se repite */
+    background-repeat: repeat-y; 
 }
 
 .fondo-especial {
     background-image: url(imagenes/presentacion-agricola.JPG); /* Ruta de tu imagen */
-    background-size:cover; 
-    background-repeat: no-repeat; /* No se repite */
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 .fondo-especial-2 {
     background-image: url(imagenes/background-agricola-oscuro.jpg); /* Ruta de tu imagen */
     background-size:cover; 
-    background-repeat: no-repeat; /* No se repite */
+    background-repeat: repeat-y 
 }
 
 .contenedor {
-    position: absolute;
-    top: 0;
-    left: 4.75rem;
-    right: 70rem;
-    bottom: 0;
-    background-color: #2e4b3a95;
+    background-color: #2e4b3aba;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem; /* Ajusta el relleno según tus preferencias */
+    width: 100vw;
 }
+
+/* Consulta de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 1rem; /* Ajusta el relleno para pantallas más pequeñas */
+    }
+}
+
 
 .contenedor a {
     text-decoration: none;
     color: #fff;
 }
 
-h1 {
+header h1 {
     color: #FFF;
     text-align: center;
     font-family: Alegreya;
-    font-size: 3rem; 
+    font-size: 2rem; 
     font-weight: 700;
     line-height: 1.23023; 
     text-transform: uppercase;
     margin-top: 2rem;
     letter-spacing: 0.25rem;
     flex-shrink: 0; 
-    width: 15rem;
-    height: 9.3125rem;
 }
 
 h2 {
@@ -56,19 +64,28 @@ h2 {
     font-size: 1.4rem;
     color: #2E4B3A;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    h2 {
+        font-size: 1rem; /* Tamaño ajustado para pantallas más pequeñas */
+        margin-top: 2rem; /* Ajuste de margen */
+    }
 }
 
 h3 {
     color: #2E4B3A;
     text-align: center;
     font-family: Inter;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 nav {
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav a {
@@ -76,12 +93,13 @@ nav a {
     text-align: center;
     display: block;
     font-family: Inter;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 500;
     line-height: 123.023%;
     text-transform: uppercase;
     text-decoration: none;
-    margin-bottom: 2.25rem ;
+    margin: 2rem;
+    margin-top: 1rem;
 }
 
 nav a:hover {
@@ -100,8 +118,6 @@ nav a:hover {
     color: #2E4B3A;
     display: inline-block;
     text-align: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
 }
 
 .contacto p {
@@ -128,14 +144,14 @@ em {
     flex-shrink: 0;
     text-align: center;
     margin: auto; /* Añadimos esto para centrar horizontalmente */
-    margin-top: 30%;
+    margin-top: 10%;
     word-spacing: 0.6rem;
     letter-spacing: 0.2rem;
 }
 
 .boton {
     display: inline-block;
-    padding: 0.75rem 1.5rem ; /* Ajusta el padding según tus preferencias */
+    padding: 0.75rem 1.5rem; 
     background-color:#E59E32; /* Color de fondo del botón */
     color: #fff; /* Color del texto */
     font-family: Inter;
@@ -148,8 +164,14 @@ em {
     border: none; /* Sin borde */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     letter-spacing: 0.07rem;
-    margin-left: 27rem;
-    margin-right: 27rem;
+    margin-left: 40%; /* Ajusta el margen izquierdo en porcentaje */
+    margin-right: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+    .boton {
+        font-size: 0.4rem; /* Ajusta el tamaño de fuente en pantallas más pequeñas */
+    }
 }
 
 .boton:hover {
@@ -162,21 +184,22 @@ em {
 
 main {
     text-align: center;
-    width: 65rem;
-    margin-right: 0;
-    margin-left: auto;
+    width: 90%; /* Usamos porcentaje para el ancho */
+    margin: 0; /* Centramos el main */
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    
 }
 
 .historia p {
     color:#FFF;
     text-align: justify;
     font-family: Inter;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 156.023%; /* 1.95031rem */
+    margin: 6%;
 }
 
 .mi-icono {
@@ -193,18 +216,23 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 2rem;
-    margin: 0 auto;
+    column-gap: 0.7rem;
 }
 
-.columna1, .columna2, .columna3, .columna4, .columna5, .columna6, .columna7, .columna8 {
-    margin-top: 3rem;
+.columna3 {
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .section1 {
+        column-gap: 0.1rem; /* Reducimos el espacio entre columnas en pantallas más pequeñas */
+    }
 }
 
 .slider-container {
     display: flex;
-    width: 100%;
-    height: 70vh;
+    width: 90%;
+    height: auto;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -214,12 +242,11 @@ main {
     width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-    cursor:grab;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
 }
 
 .slider-container::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
+    width: 0px; /* Ancho de la barra de desplazamiento */
 }
 
 .palta {
@@ -231,7 +258,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 2rem;
+    column-gap: 1%;
     margin: 0 auto;
 }
 
@@ -244,10 +271,11 @@ main {
 }
 
 .calendario {
-    width: 70%;
+    width: 50%;
     height: auto;
     display: block;
     margin: 0 auto;
+    margin-bottom: 3%;
 }
 
 .footer {
@@ -258,6 +286,51 @@ main {
     color: #fff;
     text-align: center;
     font-family: Inter;
-    font-size: smaller;
-    padding: 10px;
+    font-size: 1rem; /* Utilizamos una unidad relativa */
+    padding: 1rem; /* Ajusta el relleno según tus preferencias */
+    background-color: #2e4b3aaa;
+}
+
+/* Consulta de medios para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.5rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+        padding: 0.5rem; /* Ajusta el relleno para pantallas más pequeñas */
+    }
+}
+
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .historia {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+    }
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.galeria img {
+    width: calc(33.33% - 10px); /* Ajusta el ancho de las imágenes y el espacio entre ellas */
+    margin-bottom: 10px; /* Puedes ajustar el espacio entre las imágenes según tus preferencias */
+    border-radius: 5%;
+}
+
+.actualidad p {
+    color:#FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 156.023%; /* 1.95031rem */
+    margin: 6%;
 }
